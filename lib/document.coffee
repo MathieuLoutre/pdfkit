@@ -98,6 +98,8 @@ class PDFDocument extends stream.Readable
     # the top left rather than the bottom left
     @_ctm = [1, 0, 0, 1, 0, 0]
     @transform 1, 0, 0, -1, 0, @page.height
+
+    @options.afterAddPage?(@)
     
     return this
 
